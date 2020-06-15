@@ -63,7 +63,7 @@ public class CustomTerrain : MonoBehaviour {
     public float GetHeight(int x, int z) //0~ 1사이에 float 값. 
     {
         return heightMapImage.GetPixel((int)(x * heightMapScale.x),
-                                                          (int)(z * heightMapScale.z)).grayscale * heightMapScale.y;
+                                       (int)(z * heightMapScale.z)).grayscale * heightMapScale.y;
 
     }
 

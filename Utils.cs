@@ -21,12 +21,12 @@ public class Utils
   
     public static int GenerateHeight(float x, float z) // 높이를 생성을 정한다.
     {
-        //float height = Map(0,maxHeight, 0, 1, fBM(x*smooth,z*smooth,octaves,persistence)); //fBM을 이용해서 높이값을 생성하고 map 함수는 0~1 사이의 값으로 보정하기위함, 그래서 이부분은 상요할 필요가 없으ㅜ 
+       
 
         CustomTerrain customTerrain = GameObject.Find("Terrain").GetComponent<CustomTerrain>();
 
     
-        float height = Map(0, maxHeight, 0, 1, customTerrain.GetHeight((int)x,(int)z)); // 성공 하지만, 왜 블럭으로만 만들어지는
+        float height = Map(0, maxHeight, 0, 1, customTerrain.GetHeight((int)x,(int)z)); // 성공 
 
         return (int) height;//지도 데이터를 가져와서 (int) height를 추출하면 됨!!!!!!! 
     }

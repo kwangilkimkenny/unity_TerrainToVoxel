@@ -9,8 +9,8 @@ using UnityEngine;
 public class World : MonoBehaviour {
 
 	public Material textureAtlas;
-	public static int columnHeight = 16;
-	public static int chunkSize = 16;
+	public static int columnHeight = 32;
+	public static int chunkSize = 32;
 	public static int worldSize = 32;
 	public static Dictionary<string, Chunk> chunks;
 
@@ -39,9 +39,10 @@ public class World : MonoBehaviour {
 	//		c.Value.DrawChunk();
 	//		yield return null;
 	//	}
-		
+
 	//}
 
+	public UIManager uIManager; // UIManager를 사용하겠다는 거로 선언을 우선하uIManager.Cal(); // UIManager의 cal()실행하여 블럭이 얼마나 생성되었는지 계산후 ui로 표시해준다.
 
 
 	IEnumerator BuildWorld() //만들어진 청크를 가져와서 합쳐서 월드를 만든다.
@@ -61,8 +62,10 @@ public class World : MonoBehaviour {
 		{
 			c.Value.DrawChunk(); //청크를 그린다.
 			yield return null;
+			
 		}
-		
+
+		uIManager.TotalVoxelCal(); // 블럭 생성이 끝나면, UIManager의 cal()실행하여 블럭이 얼마나 생성되었는지 계산후 ui로 표시해준다.
 	}
 
 	// Use this for initialization
