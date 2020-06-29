@@ -87,7 +87,7 @@ public class CustomTerrain : MonoBehaviour {
 
     void OnEnable()// 1
     {
-        Debug.Log("Initialising Terrain Data");
+        //Debug.Log("Initialising Terrain Data");
         terrain = this.GetComponent<Terrain>(); //터레인을 잡아서 터레인에 넣음
         terrainData = Terrain.activeTerrain.terrainData; //모든 터레인의 데이터가 terrainData에 담아/
     }

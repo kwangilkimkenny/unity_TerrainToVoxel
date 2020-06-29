@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CreateQuads : MonoBehaviour {
 
-	enum Cubeside {BOTTOM, TOP, LEFT, RIGHT, FRONT, BACK}; // 상태를 구분한다.
+	enum Cubeside {BOTTOM, TOP, LEFT, RIGHT, FRONT, BACK}; //  quad의 상태를 구분한다.
 	public enum BlockType {GRASS, DIRT, STONE}; // 상태구분
 
 	public Material cubeMaterial; // 재질 선언
@@ -26,12 +26,12 @@ public class CreateQuads : MonoBehaviour {
 		Mesh mesh = new Mesh();
 	    mesh.name = "ScriptedMesh" + side.ToString(); 
 
-		Vector3[] vertices = new Vector3[4];
+		Vector3[] vertices = new Vector3[4]; //1 quad = 4 vertices
 		Vector3[] normals = new Vector3[4];
 		Vector2[] uvs = new Vector2[4];
-		int[] triangles = new int[6];
+		int[] triangles = new int[6]; // 1 quad = 2 triangles
 
-		//all possible UVs
+		//all possible UVs in 1 quad
 		Vector2 uv00;
 		Vector2 uv10;
 		Vector2 uv01;

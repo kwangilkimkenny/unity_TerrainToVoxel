@@ -29,9 +29,9 @@ public class Block {
 	public Block(BlockType b, Vector3 pos, GameObject p, Chunk o)
 	{
 		bType = b;
-		owner = o;
-		parent = p;
 		position = pos;
+		parent = p;
+		owner = o;
 		if(bType == BlockType.AIR)
 			isSolid = false;
 		else
